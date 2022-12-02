@@ -30,7 +30,7 @@
                   ? 'dot-outlined-women dot-filled-women'
                   : ''
               "
-              v-for="n in Math.floor(product.rating.rate)"
+              v-for="n in Math.ceil(product.rating.rate)"
               :key="n"
             ></span>
             <span
@@ -41,7 +41,7 @@
                   ? 'dot-outlined-women'
                   : ''
               "
-              v-for="n in maxRating - Math.floor(product.rating.rate)"
+              v-for="n in maxRating - Math.ceil(product.rating.rate)"
               :key="n"
             ></span>
           </div>
